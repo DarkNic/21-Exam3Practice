@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  FOR and WHILE loops.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Nicolas Bohner.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -108,7 +108,7 @@ def run_test_practice_problem3():
                                [139, 183, 516, 560, 849]),
              st.SimpleTestCase(practice_problem3,
                                [0, 1, 1.414213562373],
-                               [286602]),
+                               [286602])
              ]
     # 14th test:
     big_list = []
@@ -134,6 +134,18 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ####################################################################
+
+    acutal = practice_problem3(0, 0, 0)
+    answer = []
+    print("Test 15")
+    print("Expected:", answer)
+    print("Actual  :", acutal)
+
+    acutal = practice_problem3(-9.9, 2, 1.0)
+    answer = [-5.9, -4.9]
+    print("Test 16")
+    print("Expected:", answer)
+    print("Actual:  ", acutal)
 
 
 def practice_problem3(start, n, threshold):
@@ -208,7 +220,7 @@ def practice_problem3(start, n, threshold):
       :type threshold: float
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ####################################################################
@@ -216,9 +228,16 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
-
+    list1 = []
+    while n > len(list1):
+        if math.sin(start)+math.cos(start) > threshold:
+            list1.append(start)
+        start = start+1
+    return list1
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
+
 main()
